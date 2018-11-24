@@ -25,15 +25,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //create first brand new realm, different persistent containers
      
         print(Realm.Configuration.defaultConfiguration.fileURL)
-        let data = Data()
-        data.name = "Jorge"
-        data.age = 20
-        
+
         do {
-            let realm = try Realm()
-            try realm.write {
-                realm.add(data)
-            }
+            let realm = try Realm()       
         }catch {
             print("Error initializing realm")
         }
